@@ -1,25 +1,21 @@
 // PART 1
 
 // Create a constructor function for a Person, each person should have a firstName, lastName, favoriteColor and favoriteNumber. Your function MUST be named Person.
+// Inside: Write a method called multiplyFavoriteNumber that takes in a number and returns the product of the number and the object created from the Person functions' favorite number.
 
 function Person(firstName, lastName, favoriteColor, favoriteNumber){
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.favoriteColor = favoriteColor;
 	this.favoriteNumber = favoriteNumber;
+	this.multiplyFavoriteNumber = function(num){
+		return this.favoriteNumber * num;
+	}
 }
 
 const julien = new Person("Julien", "Rioux", "blue", 4);
 
-// console.log(julien)
-
-// Write a method called multiplyFavoriteNumber that takes in a number and returns the product of the number and the object created from the Person functions' favorite number.
-
-function multiplyFavoriteNumber(num){
-	return this.favoriteNumber * num;
-}
-
-console.log(multiplyFavoriteNumber.call(julien,3));
+console.log(julien.multiplyFavoriteNumber(10))
 
 // PART 2
 
