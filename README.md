@@ -1,1 +1,1 @@
-# javascriptCallApply-Bind
+# Just some JavaScript reminders
